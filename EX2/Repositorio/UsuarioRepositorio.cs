@@ -77,5 +77,18 @@ namespace EX2.Repositorio {
 
             return usuario;
         }
+
+        public void Excluir(int id) {
+            string[] linhas = File.ReadAllLines("usuarios.csv");
+
+            for (int i = 0; i < linhas.Length; i++) {
+                string[] linha = linhas[i].Split(";");
+                if(id.ToString().Equals(linha[0])) {
+                    linhas[i] = "";
+                    break;
+                }
+            }
+            File.WriteAllLines("usuarios.csv", linhas);
+        }
     }
 }

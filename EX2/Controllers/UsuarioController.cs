@@ -67,5 +67,14 @@ namespace EX2.Controllers {
             TempData["mensagem"] = "Usuario editado com sucesso";
             return RedirectToAction ("Listar");
         }
+
+        [HttpGet]
+        public IActionResult Excluir(int id) {
+            UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio();
+            usuarioRepositorio.Excluir(id);
+
+            TempData["mensagem"] = "Usuário excluido com sucesso";
+            return RedirectToAction("Listar");
+        }
     }
 }

@@ -5,21 +5,23 @@
 <h1>Seja Bem Vindo!</h1>
 
 <form action="/Usuario/Cadastrar" method="POST">
-    <label>
-        Nome
-        <input type="text" name="nome">
-    </label>
-    <label>
-        Email
-        <input type="text" name="email">
-    </label>
-    <label>
-        Senha
-        <input type="password" name="senha">
-    </label>
-    <label>
-        Data de Nascimento
-        <input type="date" name="dataDeNascimento">
-    </label>
-    <input type="submit" value="cadastrar">
+    <div class="form-group">
+        <label>
+            Nome
+            <input class="form-control" type="text" name="nome">
+        </label>
+        <label>
+            Email
+            <input class="form-control" type="text" name="email">
+        </label>
+        <label>
+            Senha
+            <input class="form-control" type="password" name="senha">
+        </label>
+        <label>
+            Data de Nascimento
+            <input class="form-control" type="date" name="dataDeNascimento">
+        </label>
+        <input class="btn btn-primary" type="submit" value="cadastrar">
+    </div>
 </form>
