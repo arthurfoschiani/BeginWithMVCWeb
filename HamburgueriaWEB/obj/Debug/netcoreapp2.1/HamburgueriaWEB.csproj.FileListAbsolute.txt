@@ -27,6 +27,6 @@ C:\Users\43127523890\Documents\WEBmvc\HamburgueriaWEB\obj\Debug\netcoreapp2.1\Ha
 C:\Users\43127523890\Documents\WEBmvc\HamburgueriaWEB\obj\Debug\netcoreapp2.1\HamburgueriaWEB.dll
 C:\Users\43127523890\Documents\WEBmvc\HamburgueriaWEB\obj\Debug\netcoreapp2.1\HamburgueriaWEB.pdb
 C:\Users\43127523890\Documents\WEBmvc\HamburgueriaWEB\obj\Debug\netcoreapp2.1\HamburgueriaWEB.csproj.CopyComplete
-C:\Users\43127523890\Documents\WEBmvc\HamburgueriaWEB\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LogoArea.g.cshtml.cs
 C:\Users\43127523890\Documents\WEBmvc\HamburgueriaWEB\obj\Debug\netcoreapp2.1\Razor\Views\Pedido\Index.g.cshtml.cs
 C:\Users\43127523890\Documents\WEBmvc\HamburgueriaWEB\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Sucesso.g.cshtml.cs
+C:\Users\43127523890\Documents\WEBmvc\HamburgueriaWEB\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_HeaderNavBar.g.cshtml.cs
