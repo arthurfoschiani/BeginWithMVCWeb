@@ -1,3 +1,5 @@
+@model HamburgueriaWEB.ViewModels.PedidoViewModel
+
 <header>
     @{
         Html.RenderPartial("_HeaderNavBar");
@@ -36,16 +38,18 @@
                 <label for="hamburguer">Hamburguer</label>
                 <select id="hamburguer" name="hamburguer" required>
                     <option value="" disabled selected>Selecione</option>
-                    <option value="furioso">Furioso</option>
-                    <option value="combo">Combo</option>
+                    @foreach (var hamburguer in Model.Hamburgueres) {
+                        <option value=@hamburguer.Nome>@hamburguer.Nome</option>
+                    }
                 </select>
             </div>
             <div>
                 <label for="shake">Shake</label>
                 <select id="shake" name="shake" >
                     <option value="" disabled selected>Selecione</option>
-                    <option value="chocolate">Chocolate</option>
-                    <option value="biscoito">Biscoito</option>
+                    @foreach (var shake in Model.Shakes) {
+                        <option value=@shake.Nome>@shake.Nome</option>
+                    }
                 </select>
             </div>
         </div>
