@@ -1,0 +1,31 @@
+@using EstacionamentoWEB.Models
+
+@{
+    Layout = "Masterpage";
+    ViewBag.Title = "Lista de Cadastros";
+}
+<h2>@TempData["mensagem"]</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome Usuário</th>
+            <th scope="col">Modelo do Carro</th>
+            <th scope="col">Marca do Carro</th>
+            <th scope="col">Placa do Carro</th>
+            <th scope="col">Momento da entrada</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in ViewData["carros"] as List<CarroModel>) {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.NomeUsuario</td>
+            <td>@item.Modelo</td>
+            <td>@item.Marca</td>
+            <td>@item.Placa</td>
+            <td>@item.MomentoDaEntrada</td>
+        </tr>
+    }
+    </tbody>
+</table>

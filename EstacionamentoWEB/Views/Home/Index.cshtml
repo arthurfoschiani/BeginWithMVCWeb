@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "Masterpage";
+    ViewBag.Title = "Cadastro de Entrada";
+}
+<h1>Seja Bem Vindo!</h1>
+
+<form action="/Home/Cadastrar" method="POST">
+    <div>
+        <label>
+            Nome do Usuário
+            <input type="text" name="nomeUsuario">
+        </label>
+        <label>
+            Modelo do Carro
+            <input type="text" name="modelo">
+        </label>
+        <label>
+            Marca do Carro
+            <input type="text" name="marca">
+        </label>
+        <label>
+            Placa do Carro
+            <input type="text" name="placa">
+        </label>
+        <label>
+            Dia e Hora da Entrada
+            <input type="date" name="momentoDaEntrada">
+        </label>
+        <input type="submit" value="cadastrar">
+    </div>
+</form>

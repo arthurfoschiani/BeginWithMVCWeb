@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using HamburgueriaWEB.Models;
+using Hamburgueria_Manha.Models;
 
-namespace HamburgueriaWEB.Controllers
+namespace Hamburgueria_Manha.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,15 +1,16 @@
 using System.Collections.Generic;
 using System.IO;
-using HamburgueriaWEB.Models;
+using Hamburgueria_Manha.Models;
 
-namespace HamburgueriaWEB.Repositorios
+namespace Hamburgueria_Manha.Repositorios
 {
     public class ShakeRepositorio
     {
         private const string PATH = "Database/Shake.csv";
         private List<Shake> Shakes = new List<Shake>();
 
-        public List<Shake> Listar() {
+        public List<Shake> Listar() 
+        {
             var registros = File.ReadAllLines(PATH);
             foreach (var item in registros)
             {
@@ -21,18 +22,6 @@ namespace HamburgueriaWEB.Repositorios
                 this.Shakes.Add(shake);
             }
             return this.Shakes;
-        }
-
-        public double ObterPrecoDe(string nomeShake) {
-            var lista = Listar();
-            var preco = 0.0;
-
-            foreach (var item in lista) {
-                if (item.Nome.Equals(nomeShake)) {
-                    preco = item.Preco;
-                }
-            }
-            return preco;
         }
     }
 }

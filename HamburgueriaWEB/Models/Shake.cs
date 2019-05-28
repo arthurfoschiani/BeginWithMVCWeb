@@ -1,11 +1,7 @@
-using Microsoft.Extensions.Primitives;
-
-namespace HamburgueriaWEB.Models
+namespace Hamburgueria_Manha.Models
 {
     public class Shake : Produto
     {
-        public Shake() {
-
-        }
+        
     }
 }

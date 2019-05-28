@@ -1,6 +1,6 @@
 using System;
 
-namespace HamburgueriaWEB.Models
+namespace Hamburgueria_Manha.Models
 {
     public class ErrorViewModel
     {

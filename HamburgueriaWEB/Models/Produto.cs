@@ -1,4 +1,4 @@
-namespace HamburgueriaWEB.Models
+namespace Hamburgueria_Manha.Models
 {
     public class Produto
     {
