@@ -1,22 +1,35 @@
-﻿@{
+﻿@model EstacionamentoWEB.ViewModels.EntradaViewModel
+@{
     Layout = "Masterpage";
     ViewBag.Title = "Cadastro de Entrada";
 }
 <h1>Seja Bem Vindo!</h1>
 
-<form action="/Home/Cadastrar" method="POST">
+<form action="/Home/RegistrarEntrada" method="POST">
     <div>
         <label>
             Nome do Usuário
-            <input type="text" name="nomeUsuario">
-        </label>
-        <label>
-            Modelo do Carro
-            <input type="text" name="modelo">
+            <input type="text" name="nome">
         </label>
         <label>
             Marca do Carro
-            <input type="text" name="marca">
+            <select id="marca" name="marca" required>
+                <option value="" disable selected>Selecione</option>
+                @foreach (var marca in Model.Marcas)
+                {
+                    <option value="@marca.Nome">@marca.Nome</option>
+                }
+            </select>
+        </label>
+        <label>
+            Modelo do Carro
+            <select id="modelo" name="modelo" required>
+                <option value="" disable selected>Escolha</option>
+                @foreach (var modelo in Model.Modelos)
+                {
+                    <option value="@modelo.Nome">@modelo.Nome</option>
+                }
+            </select>
         </label>
         <label>
             Placa do Carro

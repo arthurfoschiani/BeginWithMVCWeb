@@ -1,6 +1,6 @@
 namespace EstacionamentoWEB.Models
 {
-    public class ModeloModel : Carro
+    public class Modelo : CarroModel
     {
         
     }

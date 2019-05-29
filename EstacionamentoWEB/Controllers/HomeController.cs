@@ -1,6 +1,7 @@
 ﻿using System;
 using EstacionamentoWEB.Models;
 using EstacionamentoWEB.Repositorio;
+using EstacionamentoWEB.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,41 +9,59 @@ namespace EstacionamentoWEB.Controllers
 {
     public class HomeController : Controller
     {
+        EntradaRepositorio entrarRepositorio = new EntradaRepositorio();
+        MarcaRepositorio marcaRepositorio = new MarcaRepositorio();
+        ModeloRepositorio modeloRepositorio = new ModeloRepositorio();
+
         [HttpGet]
-        public IActionResult Index()
-        {
-            return View();
+        public IActionResult Index() {
+            var marcas = marcaRepositorio.Listar();
+            var modelos = modeloRepositorio.Listar();
+
+            EntradaViewModel entrada = new EntradaViewModel();
+            entrada.Marcas = marcas;
+            entrada.Modelos = modelos;
+
+            return View(entrada);
         }
 
         [HttpPost]
-        public IActionResult Cadastrar (IFormCollection form) {
-            System.Console.WriteLine(form["nomeUsuario"]);
-            System.Console.WriteLine(form["modelo"]);
-            System.Console.WriteLine(form["marca"]);
-            System.Console.WriteLine(form["placa"]);
-            System.Console.WriteLine(form["momentoDaEntrada"]);
+        public IActionResult RegistrarEntrada(IFormCollection form) {
+            System.Console.WriteLine("nome");
+            System.Console.WriteLine("marca");
+            System.Console.WriteLine("modelo");
+            System.Console.WriteLine("placa");
 
-
-
-            CarroModel carro = new CarroModel();
-            carro.Id = int.Parse(form["id"]);
-            carro.NomeUsuario = form["nomeUsuario"];
-            carro.Placa = form["placa"];
-            carro.MomentoDaEntrada = DateTime.Parse(form["momentoDaEntrada"]);
-
-            MarcaModel Marca = new MarcaModel();
-            Marca.Nome = form["nome"];
-
-            ModeloModel Modelo = new ModeloModel();
-            Modelo.Nome = form["nome"];
-
+            Entrada entrada = new Entrada();
             
+            entrada.Usuario = form["nome"];
+
+            Marca marca = new Marca();
+            marca.Nome = form["marca"];
+
+            entrada.Marca = marca;
+
+            Modelo modelo = new Modelo();
+            modelo.Nome = form["modelo"];
+
+            entrada.Modelo = modelo;
+
+            Placa placa = new Placa();
+            placa.Nome = form["placa"];
+
+            entrada.Placa = placa;
+
+            entrada.DataEntrada = DateTime.Now;
+
+            entrarRepositorio.Inserir(entrada);
+
+            return View("Sucesso");
         }
 
         [HttpGet]
-        public IActionResult Listar() {
-            CarroRepositorio carroRepositorio = new CarroRepositorio();
-            ViewData["Carros"] = carroRepositorio.ListarCarros();
+        public IActionResult Listar(){
+            EntradaRepositorio entradaRepositorio = new EntradaRepositorio();
+            ViewData["entrada"] = entradaRepositorio.ListarEntrada();
 
             return View();
         }

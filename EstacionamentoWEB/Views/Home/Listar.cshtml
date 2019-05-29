@@ -4,7 +4,6 @@
     Layout = "Masterpage";
     ViewBag.Title = "Lista de Cadastros";
 }
-<h2>@TempData["mensagem"]</h2>
 <table class="table">
     <thead>
         <tr>
@@ -17,14 +16,14 @@
         </tr>
     </thead>
     <tbody>
-    @foreach (var item in ViewData["carros"] as List<CarroModel>) {
+    @foreach (var item in ViewData["entrada"] as List<Entrada>) {
         <tr>
             <td>@item.Id</td>
-            <td>@item.NomeUsuario</td>
-            <td>@item.Modelo</td>
-            <td>@item.Marca</td>
-            <td>@item.Placa</td>
-            <td>@item.MomentoDaEntrada</td>
+            <td>@item.Usuario</td>
+            <td>@item.Marca.Nome</td>
+            <td>@item.Modelo.Nome</td>
+            <td>@item.Placa.Nome</td>
+            <td>@item.DataEntrada</td>
         </tr>
     }
     </tbody>

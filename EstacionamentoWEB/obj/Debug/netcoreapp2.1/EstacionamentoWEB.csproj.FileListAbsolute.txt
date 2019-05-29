@@ -25,3 +25,5 @@ C:\Users\43127523890\Documents\WEBmvc\EstacionamentoWEB\obj\Debug\netcoreapp2.1\
 C:\Users\43127523890\Documents\WEBmvc\EstacionamentoWEB\obj\Debug\netcoreapp2.1\EstacionamentoWEB.pdb
 C:\Users\43127523890\Documents\WEBmvc\EstacionamentoWEB\obj\Debug\netcoreapp2.1\EstacionamentoWEB.csproj.CopyComplete
 C:\Users\43127523890\Documents\WEBmvc\EstacionamentoWEB\obj\Debug\netcoreapp2.1\Razor\Views\Home\Listar.g.cshtml.cs
+C:\Users\43127523890\Documents\WEBmvc\EstacionamentoWEB\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Sucesso.g.cshtml.cs
+C:\Users\43127523890\Documents\WEBmvc\EstacionamentoWEB\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
