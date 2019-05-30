@@ -3,17 +3,17 @@
     Layout = "Masterpage";
     ViewBag.Title = "Cadastro de Entrada";
 }
-<h1>Seja Bem Vindo!</h1>
+<h1>Seja bem-vindo</h1>
 
 <form action="/Home/RegistrarEntrada" method="POST">
-    <div>
-        <label>
+    <div class="form-group">
+        <label for="exampleInputEmail1">
             Nome do Usuário
-            <input type="text" name="nome">
+            <input class="form-control" id="exampleInputEmail1" type="text" name="nome">
         </label>
-        <label>
+        <label for="exampleInputEmail1">
             Marca do Carro
-            <select id="marca" name="marca" required>
+            <select class="form-control" id="marca" name="marca" required>
                 <option value="" disable selected>Selecione</option>
                 @foreach (var marca in Model.Marcas)
                 {
@@ -21,9 +21,9 @@
                 }
             </select>
         </label>
-        <label>
+        <label for="exampleInputEmail1">
             Modelo do Carro
-            <select id="modelo" name="modelo" required>
+            <select class="form-control" id="modelo" name="modelo" required>
                 <option value="" disable selected>Escolha</option>
                 @foreach (var modelo in Model.Modelos)
                 {
@@ -31,14 +31,14 @@
                 }
             </select>
         </label>
-        <label>
+        <label for="exampleInputEmail1">
             Placa do Carro
-            <input type="text" name="placa">
+            <input class="form-control" id="exampleInputEmail1" type="text" name="placa">
         </label>
-        <label>
+        <label for="exampleInputEmail1">
             Dia e Hora da Entrada
-            <input type="date" name="momentoDaEntrada">
+            <input class="form-control" id="exampleInputEmail1" type="date" name="momentoDaEntrada">
         </label>
-        <input type="submit" value="cadastrar">
+        <input id="botao" class="btn btn-primary" type="submit" value="cadastrar">
     </div>
 </form>

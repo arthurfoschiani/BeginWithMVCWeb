@@ -39,17 +39,17 @@ namespace EstacionamentoWEB.Controllers
             Marca marca = new Marca();
             marca.Nome = form["marca"];
 
-            entrada.Marca = marca;
+            entrada.Marca = marca.Nome;
 
             Modelo modelo = new Modelo();
             modelo.Nome = form["modelo"];
 
-            entrada.Modelo = modelo;
+            entrada.Modelo = modelo.Nome;
 
             Placa placa = new Placa();
             placa.Nome = form["placa"];
 
-            entrada.Placa = placa;
+            entrada.Placa = placa.Nome;
 
             entrada.DataEntrada = DateTime.Now;
 

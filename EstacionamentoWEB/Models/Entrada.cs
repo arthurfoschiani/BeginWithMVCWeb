@@ -4,11 +4,11 @@ namespace EstacionamentoWEB.Models
 {
     public class Entrada
     {
-        public ulong Id;
-        public string Usuario;
-        public Marca Marca;
-        public Modelo Modelo;
-        public Placa Placa;
-        public DateTime DataEntrada;
+        public int Id {get;set;}
+        public string Usuario {get;set;}
+        public string Marca {get;set;}
+        public string Modelo {get;set;}
+        public string Placa {get;set;}
+        public DateTime DataEntrada {get;set;}
     }
 }
