@@ -1,0 +1,6 @@
+C:\Users\43127523890\Documents\WEBmvc\Hamburgueria_Manha\obj\Debug\netcoreapp2.1\Hamburgueria_Manha.csprojAssemblyReference.cache
+C:\Users\43127523890\Documents\WEBmvc\Hamburgueria_Manha\obj\Debug\netcoreapp2.1\Hamburgueria_Manha.csproj.CoreCompileInputs.cache
+C:\Users\43127523890\Documents\WEBmvc\Hamburgueria_Manha\obj\Debug\netcoreapp2.1\Hamburgueria_Manha.RazorAssemblyInfo.cache
+C:\Users\43127523890\Documents\WEBmvc\Hamburgueria_Manha\obj\Debug\netcoreapp2.1\Hamburgueria_Manha.RazorAssemblyInfo.cs
+C:\Users\43127523890\Documents\WEBmvc\Hamburgueria_Manha\obj\Debug\netcoreapp2.1\Hamburgueria_Manha.AssemblyInfoInputs.cache
+C:\Users\43127523890\Documents\WEBmvc\Hamburgueria_Manha\obj\Debug\netcoreapp2.1\Hamburgueria_Manha.AssemblyInfo.cs
