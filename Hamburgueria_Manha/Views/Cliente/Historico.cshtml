@@ -1,4 +1,4 @@
-@model Hamburgueria.ViewModels.HistoricoViewModel
+@model Hamburgueria_Manha.ViewModels.HistoricoViewModel
 @{
     ViewData["Title"] = "Pedidos - McBonald's";
     ViewData["H2"] = "Histórico de Pedidos";
@@ -27,7 +27,7 @@
         <tbody>
             @foreach( var pedido in Model.Pedidos ) {
                 <tr>
-                    <td>@pedido.DataDoPedido</td>
+                    <td>@pedido.DataPedido</td>
                     <td>@pedido.Hamburguer.Nome</td>
                     <td>@pedido.Shake.Nome</td>
                     <td>@pedido.PrecoTotal</td>

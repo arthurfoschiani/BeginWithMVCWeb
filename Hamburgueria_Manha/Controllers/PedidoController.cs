@@ -1,4 +1,5 @@
 using System;
+using Hamburgueria.Repositories;
 using Hamburgueria_Manha.Models;
 using Hamburgueria_Manha.Repositorios;
 using Hamburgueria_Manha.ViewModels;
@@ -9,7 +10,10 @@ namespace Hamburgueria_Manha.Controllers
 {
     public class PedidoController : Controller
     {
-        PedidoRepositorio pedidoRepositorio = new PedidoRepositorio();
+        private const string SESSION_EMAIL = "_EMAIL";
+        private const string SESSION_CLIENTE = "_CLIENTE";
+        ClienteRepository clienteRepository = new ClienteRepository();
+        PedidoRepository pedidoRepositorio = new PedidoRepository();
         HamburguerRepositorio hamburguerRepositorio = new HamburguerRepositorio();
         ShakeRepositorio shakeRepositorio = new ShakeRepositorio();
         
@@ -18,10 +22,12 @@ namespace Hamburgueria_Manha.Controllers
         {
             var hamburgueres = hamburguerRepositorio.Listar();
             var shakes = shakeRepositorio.Listar();
-
+            var cliente = clienteRepository.ObterPor(HttpContext.Session.GetString(SESSION_EMAIL));
+            
             PedidoViewModel pedido = new PedidoViewModel();
             pedido.Hamburgueres = hamburgueres;
             pedido.Shakes = shakes;
+            pedido.Cliente = cliente == null ? new Cliente() : cliente;
             
             return View(pedido);
         }

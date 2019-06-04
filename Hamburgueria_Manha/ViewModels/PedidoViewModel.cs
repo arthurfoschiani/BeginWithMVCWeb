@@ -7,7 +7,6 @@ namespace Hamburgueria_Manha.ViewModels
     {
         public List<Hamburguer> Hamburgueres {get;set;}
         public List<Shake> Shakes {get;set;}
-
-        
+        public Cliente Cliente {get;set;}
     }
 }
